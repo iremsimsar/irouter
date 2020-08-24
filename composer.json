@@ -1,5 +1,7 @@
 {
     "name": "iremsimsar/irouter",
+    "description": "Basic routing library",
+    "license": "MIT",
     "authors": [
         {
             "name": "İrem SİMSAR",
