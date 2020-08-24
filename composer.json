@@ -1,0 +1,12 @@
+{
+    "name": "iremsimsar/irouter",
+    "authors": [
+        {
+            "name": "İrem SİMSAR",
+            "email": "irem.simsar@tsoft.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
