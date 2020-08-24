@@ -19,22 +19,17 @@ class Route
 
         $parsed_url = parse_url($_SERVER['REQUEST_URI']);
 
-        // Mevcut istek yöntemini al
-        $path = $parsed_url['path'] ?? '/'; //yoksa yanındakini ver
+        $path = $parsed_url['path'] ?? '/'; 
         $method = $_SERVER['REQUEST_METHOD'];
 
         foreach (self::$routes as $route) {
 
-            // Eşleşen dizeye temel yol ekle
             $route['expression'] = $route['expression'] . '$';
 
-            //burada preg_match arama yaapar
-            // Yol eşleşmesini kontrol eder
             if (preg_match('#' . $route['expression'] . '#', $path, $matches)) {
 
-                // Yöntem eşleşmesini kontrol edin
                 if (strtolower($method) == strtolower($route['method'])) {
-                    //burada aldıgı diziden birisini çeker
+
                     call_user_func_array($route['function'], $matches);
                     break;
                 }
