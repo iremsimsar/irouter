@@ -1,5 +1,7 @@
 <?php
 
+namespace IRouter;
+
 class Route
 {
 
